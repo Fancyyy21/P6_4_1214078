@@ -202,7 +202,7 @@ namespace P6_4_1214078
         {
             if (Uppercase.Text == "")
             {
-                epWarning.SetError(Uppercase, "Textbox Name tidak boleh kosong");
+                epWarning.SetError(Uppercase, "Textbox Hobi1 tidak boleh kosong");
                 epWrong.SetError(Uppercase, "");
                 epCorrect.SetError(Uppercase, "");
             }
@@ -216,7 +216,7 @@ namespace P6_4_1214078
                 }
                 else
                 {
-                    epWarning.SetError(Uppercase, "Inputan hanya boleh huruf kapital!");
+                    epWarning.SetError(Uppercase, "INPUTAN HANYA BOLEH HURUF KAPITAL!");
                     epWrong.SetError(Uppercase, "");
                     epCorrect.SetError(Uppercase, "");
                 }
@@ -227,7 +227,7 @@ namespace P6_4_1214078
         {
             if (Lowercase.Text == "")
             {
-                epWarning.SetError(Lowercase, "Textbox Name tidak boleh kosong");
+                epWarning.SetError(Lowercase, "Textbox Hobi2 tidak boleh kosong");
                 epWrong.SetError(Lowercase, "");
                 epCorrect.SetError(Lowercase, "");
             }
@@ -241,14 +241,62 @@ namespace P6_4_1214078
                 }
                 else
                 {
-                    epWarning.SetError(Lowercase, "Inputan hanya boleh huruf kecil!");
+                    epWarning.SetError(Lowercase, "inputan hanya boleh huruf kecil!");
                     epWrong.SetError(Lowercase, "");
                     epCorrect.SetError(Lowercase, "");
                 }
             }
-            
         }
 
+        private void Words1_Leave(object sender, EventArgs e)
+        {
+            if (Words1.Text == "")
+            {
+                epWarning.SetError(Words1, "Textbox Words1 tidak boleh kosong");
+                epWrong.SetError(Words1, "");
+                epCorrect.SetError(Words1, "");
+            }
+            else
+            {
+                if (Words1.Text.Length <= 5 )
+                {
+                    epWarning.SetError(Words1, "");
+                    epWrong.SetError(Words1, "");
+                    epCorrect.SetError(Words1, "Betul!");
+                }
+                else
+                {
+                    epWarning.SetError(Words1, "Tidak Boleh Lebih dari 5!");
+                    epWrong.SetError(Words1, "");
+                    epCorrect.SetError(Words1, "");
+                }
+            }
+        }
+        
+        private void Words2_Leave(object sender, EventArgs e)
+        {
+            if (Words2.Text == "")
+            {
+                epWarning.SetError(Words2, "Textbox Words2 tidak boleh kosong");
+                epWrong.SetError(Words2, "");
+                epCorrect.SetError(Words2, "");
+            }
+            else
+            {
+                if (Words2.Text.Length <= 8 )
+                {
+                    epWarning.SetError(Words2, "");
+                    epWrong.SetError(Words2, "");
+                    epCorrect.SetError(Words2, "Betul!");
+                }
+                else
+                {
+                    epWarning.SetError(Words2, "Tidak Boleh Lebih dari 8!");
+                    epWrong.SetError(Words2, "");
+                    epCorrect.SetError(Words2, "");
+                }
+            }
+        }
         private void Tampilkan_Click(object sender, EventArgs e)
         {
             MessageBox.Show
@@ -258,8 +306,10 @@ namespace P6_4_1214078
                     "\nHeight : " + Height.Text +
                     "\nWeight : " + Weight.Text +
                     "\nHobi1 : " + Uppercase.Text +
-                    "\nHobi2 : " + Lowercase.Text,
-                    "Informasi Pendaftaran",
+                    "\nHobi2 : " + Lowercase.Text +
+                    "\nWords1 : " + Words1.Text +
+                    "\nWords2 : " + Words2.Text,
+                    "Informasi Formulir",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

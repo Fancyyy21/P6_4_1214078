@@ -51,6 +51,10 @@
             this.epWarning = new System.Windows.Forms.ErrorProvider(this.components);
             this.epWrong = new System.Windows.Forms.ErrorProvider(this.components);
             this.epCorrect = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Words2 = new System.Windows.Forms.TextBox();
+            this.Words1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.epWarning)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epWrong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epCorrect)).BeginInit();
@@ -182,9 +186,9 @@
             // 
             // Uppercase
             // 
-            this.Uppercase.Location = new System.Drawing.Point(561, 408);
+            this.Uppercase.Location = new System.Drawing.Point(561, 409);
             this.Uppercase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Uppercase.MaxLength = 6;
+            this.Uppercase.MaxLength = 255;
             this.Uppercase.Name = "Uppercase";
             this.Uppercase.Size = new System.Drawing.Size(223, 22);
             this.Uppercase.TabIndex = 44;
@@ -197,15 +201,15 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(254, 409);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(255, 18);
+            this.label6.Size = new System.Drawing.Size(175, 18);
             this.label6.TabIndex = 43;
-            this.label6.Text = "Hobi1 (Uppercase) Max Lenght 6";
+            this.label6.Text = "Hobi1 (UPPERCASE) ";
             // 
             // Lowercase
             // 
-            this.Lowercase.Location = new System.Drawing.Point(561, 453);
+            this.Lowercase.Location = new System.Drawing.Point(561, 454);
             this.Lowercase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Lowercase.MaxLength = 10;
+            this.Lowercase.MaxLength = 255;
             this.Lowercase.Name = "Lowercase";
             this.Lowercase.Size = new System.Drawing.Size(223, 22);
             this.Lowercase.TabIndex = 46;
@@ -218,14 +222,14 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(254, 454);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(265, 18);
+            this.label7.Size = new System.Drawing.Size(151, 18);
             this.label7.TabIndex = 45;
-            this.label7.Text = "Hobi2 (Lowercase) Max Lenght 10";
+            this.label7.Text = "Hobi2 (lowercase) ";
             // 
             // Selesai
             // 
             this.Selesai.BackColor = System.Drawing.Color.Plum;
-            this.Selesai.Location = new System.Drawing.Point(457, 505);
+            this.Selesai.Location = new System.Drawing.Point(526, 624);
             this.Selesai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Selesai.Name = "Selesai";
             this.Selesai.Size = new System.Drawing.Size(108, 30);
@@ -237,7 +241,7 @@
             // Tampilkan
             // 
             this.Tampilkan.BackColor = System.Drawing.Color.Plum;
-            this.Tampilkan.Location = new System.Drawing.Point(307, 505);
+            this.Tampilkan.Location = new System.Drawing.Point(376, 624);
             this.Tampilkan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tampilkan.Name = "Tampilkan";
             this.Tampilkan.Size = new System.Drawing.Size(111, 30);
@@ -261,13 +265,59 @@
             this.epCorrect.ContainerControl = this;
             this.epCorrect.Icon = ((System.Drawing.Icon)(resources.GetObject("epCorrect.Icon")));
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(254, 497);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(269, 18);
+            this.label9.TabIndex = 50;
+            this.label9.Text = "Words1 or Number (Max Lenght 5)";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(254, 542);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(269, 18);
+            this.label10.TabIndex = 51;
+            this.label10.Text = "Words2 or Number (Max Lenght 8)";
+            // 
+            // Words2
+            // 
+            this.Words2.Location = new System.Drawing.Point(561, 541);
+            this.Words2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Words2.MaxLength = 255;
+            this.Words2.Name = "Words2";
+            this.Words2.Size = new System.Drawing.Size(223, 22);
+            this.Words2.TabIndex = 52;
+            this.Words2.Leave += new System.EventHandler(this.Words2_Leave);
+            // 
+            // Words1
+            // 
+            this.Words1.Location = new System.Drawing.Point(561, 497);
+            this.Words1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Words1.MaxLength = 255;
+            this.Words1.Name = "Words1";
+            this.Words1.Size = new System.Drawing.Size(223, 22);
+            this.Words1.TabIndex = 53;
+            this.Words1.Leave += new System.EventHandler(this.Words1_Leave);
+            // 
             // FormMaulanaLatihan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(888, 555);
+            this.ClientSize = new System.Drawing.Size(1050, 706);
+            this.Controls.Add(this.Words1);
+            this.Controls.Add(this.Words2);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.Selesai);
             this.Controls.Add(this.Tampilkan);
             this.Controls.Add(this.Lowercase);
@@ -318,6 +368,10 @@
         private System.Windows.Forms.ErrorProvider epWarning;
         private System.Windows.Forms.ErrorProvider epWrong;
         private System.Windows.Forms.ErrorProvider epCorrect;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Words1;
+        private System.Windows.Forms.TextBox Words2;
+        private System.Windows.Forms.Label label10;
     }
 }
 
