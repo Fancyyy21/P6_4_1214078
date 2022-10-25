@@ -106,7 +106,7 @@ namespace P6_4_1214078
             {
                 string input = String.Empty;
                 epCorrect.SetError(Height, "");
-                epWarning.SetError(Height, "Textbox Angka 2 tidak boleh kosong");
+                epWarning.SetError(Height, "Textbox Height tidak boleh kosong");
                 epWrong.SetError(Height, "");
             }
             else
@@ -156,7 +156,7 @@ namespace P6_4_1214078
                 {
                     string input = String.Empty;
 
-                    epWarning.SetError(Weight, "Text Box tidak boleh kosong!");
+                    epWarning.SetError(Weight, "TextBox Weight tidak boleh kosong!");
                     epWrong.SetError(Weight, "");
                     epCorrect.SetError(Weight, "");
                 }
